@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Request Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Purchase Request Form</h1>
+        <p>Please fill out this form to submit a purchase request for goods or services.</p>
+
+        <form action="https://formspree.io/f/mnqegwkd" method="POST" enctype="multipart/form-data">
+            <label for="itemName">Item Name:</label>
+            <input type="text" id="itemName" name="itemName" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required>
+
+            <label for="preferredVendor">Preferred Vendor:</label>
+            <input type="text" id="preferredVendor" name="preferredVendor">
+
+            <label for="quotes">Quotes Obtained ($):</label>
+            <input type="text" id="quotes" name="quotes" pattern="^[0-9]+(,[0-9]+)*$" placeholder="e.g., 100, 200, 300" required>
+
+            <button type="submit">Submit Request</button>
+        </form>
+    </div>
+</body>
+
+</html>
